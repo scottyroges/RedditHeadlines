@@ -1,0 +1,15 @@
+Search : <input id="rssSearch" type="text" ng-model="search.$">
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Reddit Headlines</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in feed | filter:search">
+			<td ng-click="goToPost($index)">
+			{{item.title}}
+			</td>
+		</tr>
+	<tbody>
+</table>
